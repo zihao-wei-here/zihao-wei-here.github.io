@@ -1,0 +1,5 @@
+navigation: 
+  enabled: true
+  style: "default"  # 你可以改成 "overlay" 试试看不同样式
+  logo: "/assets/profile.jpg"  # 你的 Logo，可以改成其他图片
+  sticky: true  # 固定导航栏

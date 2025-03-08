@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -114,10 +114,10 @@ analytics:
 # Site Author
 author:
   name             : "Zihao"
-  avatar           : "assets\\profile.png"
+  avatar           : "assets/profile.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "Sydney, Australia"
+  email            : "zwei0450@uni.sydney.edu.au"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -233,28 +233,27 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Pagination with jekyll-paginate
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: "/blog/page:num/"
 
 # Pagination with jekyll-paginate-v2
 # See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 #   for configuration details
-pagination:
-  # Set enabled to true to use paginate v2
-  # enabled: true
-  debug: false
-  collection: 'posts'
-  per_page: 10
-  permalink: '/page/:num/'
-  title: ':title - page :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  category: 'posts'
-  tag: ''
-  locale: ''
-  trail:
-    before: 2
-    after: 2
+# pagination:
+#   collection: 'articles'  # 这里改为 'articles'，让 Jekyll 识别 articles 作为分页的目标
+#   per_page: 10
+#   permalink: '/articles/page/:num/'  # 让文章分页在 /articles/ 下生效
+#   title: ':title - page :num'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+#   category: 'articles'  # 这里改成 'articles'，确保 Jekyll 识别你的文章
+#   tag: ''
+#   locale: ''
+#   trail:
+#     before: 2
+#     after: 2
+
+
 
 
 # Plugins (previously gems:)
@@ -311,9 +310,16 @@ compress_html:
     envs: development
 
 
-# Defaults
+# Pages and Permalinks
+permalink: /:categories/:title/
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# 文章默认设置
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -321,14 +327,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
-
-
-# Pages and Permalinks
-permalink: /:title/  # 文章默认的 URL 结构
-collections:
-  pages:
-    output: true
-    permalink: /:path/  # 确保 `_pages` 目录中的文件可生成 HTML 页面

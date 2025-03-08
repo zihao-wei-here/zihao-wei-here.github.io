@@ -1,0 +1,148 @@
+/* 主页布局整体调整 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 2000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* 个人信息（左侧内容） */
+.bio {
+    flex: 1;
+    max-width: 60%;
+    text-align: center;
+}
+
+/* 修改 index.html 正文中的链接颜色 */
+.bio a {
+    color: #0077cc;  /* 默认蓝色 */
+    font-weight: bold;
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease;
+}
+
+.bio a:hover {
+    color: #0055aa;  /* 悬停时变深蓝色 */
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+
+/* 个人介绍的文本优化 */
+.bio p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* 个人头像美化 */
+.bio img.avatar {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 右侧 Recent Posts 卡片 */
+.post-list {
+    width: 1000px;
+    background: rgb(240, 146, 5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Recent Posts 标题 */
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Recent Posts 里的文章列表，让日期和标题在一行 */
+.post-item {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between; /* 让日期和标题在两端 */
+    gap: 10px; /* 设置间距 */
+}
+
+/* 让日期变小，避免影响对齐 */
+.post-date {
+    font-size: 14px;
+    color: #666;
+    flex-shrink: 0; /* 避免日期被压缩 */
+}
+
+/* 文章标题样式 */
+.post-item a {
+    flex-grow: 1; /* 让标题占据可用空间 */
+    font-weight: bold;
+    color: #222;
+    transition: 0.2s;
+}
+
+/* 鼠标悬停时 */
+.post-item a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+
+/* 让 Recent Posts 卡片有 hover 效果 */
+.post-list:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* 导航栏优化 */
+.site-header {
+    background: #333;
+    color: white;
+}
+
+.site-header a {
+    color: white !important;
+}
+
+/* GitHub 和 Email hover 效果 */
+.social-icons a {
+    color: #333;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}
+
+/* Blog 页面所有链接颜色 */
+/* 只影响 .archive 里的超链接 */
+.archive h2 a {
+    color: #222 !important;
+    text-decoration: none;
+}
+.archive h2 a:hover {
+    color: #222 !important;
+    text-decoration: underline;
+}
+
+/* 让文章列表整体向右移动 */
+.archive {
+    max-width: 1300px; /* 限制宽度，避免内容过宽 */
+    margin: 0 auto;  /* 让它居中 */
+    padding-top: 50px;
+}
+
+.references a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+.references a:hover {
+    text-decoration: underline;
+    color: #111;
+}

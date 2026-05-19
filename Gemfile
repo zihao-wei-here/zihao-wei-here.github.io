@@ -15,5 +15,5 @@ group :development do
   gem "wdm", ">= 0.1.0", platforms: [:mingw, :mswin, :x64_mingw]
 end
 
-# 处理 SASS 编译崩溃问题
-gem "sass-embedded", "~> 1.58.0" # 选择稳定版本，避免 Dart Sass 兼容问题
+# Pin Sass for stable local and GitHub Pages builds.
+gem "sass-embedded", "~> 1.58.0"

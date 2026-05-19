@@ -1,84 +1,126 @@
 ---
-layout: default
+layout: single
+permalink: /
+title: "Zihao Wei"
+author_profile: true
+classes: wide home-page
 ---
 
-<div class="home-intro">
+<div class="home-hero">
+  <img src="/assets/profile.jpg" class="home-avatar" alt="Zihao Wei">
 
-  <img src="{{ site.url }}/assets/profile.jpg" class="avatar" alt="Zihao Wei">
+  <div class="home-hero-text">
+    <h1>Zihao Wei</h1>
+    <p class="home-subtitle">
+      M.Phil Student &middot; Integrated Photonics &middot; Photonic Sensing &middot; AI-assisted Design
+    </p>
 
-  <h1>Zihao Wei</h1>
+    <p>
+      I am an M.Phil student at the University of Sydney, supervised by
+      <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/xiaoke-yi.html">Prof. Xiaoke Yi</a>.
+      My research focuses on computational and integrated photonic systems, including
+      photonic sensing, microwave photonic signal processing, optimization, and
+      AI-assisted photonic design.
+    </p>
 
-  <p class="lead">
-    M.Phil student at the University of Sydney, supervised by
-    <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/xiaoke-yi.html">Prof. Xiaoke Yi</a>.
-  </p>
+    <p>
+      Before joining the University of Sydney, I received my B.E. in Computer Science from
+      <a href="https://www.nuc.edu.cn/">North University of China</a> and spent time at
+      <a href="http://english.ict.cas.cn/">ICT, Chinese Academy of Sciences</a>.
+    </p>
 
-  <p>
-    My research interests lie at the intersection of <strong>integrated photonics</strong>,
-    <strong>photonic sensing</strong>, <strong>microwave photonic signal processing</strong>,
-    and <strong>AI-assisted photonic design</strong>. I am particularly interested in how
-    computational methods, optimization, and machine learning can help design, analyze,
-    and interpret complex photonic systems.
-  </p>
-
-  <p>
-    Before joining the University of Sydney, I received my B.E. in Computer Science from
-    <a href="https://www.nuc.edu.cn/">North University of China</a> and spent time at
-    <a href="http://english.ict.cas.cn/">ICT, Chinese Academy of Sciences</a>.
-  </p>
-
-  <p>
-    <a href="mailto:zwei0450@uni.sydney.edu.au">Email</a> ·
-    <a href="https://github.com/zihao-wei-here">GitHub</a> ·
-    <a href="https://orcid.org/0009-0002-8415-6645">ORCID</a>
-  </p>
-
+    <p class="home-links">
+      <a href="mailto:zwei0450@uni.sydney.edu.au">Email</a> &middot;
+      <a href="https://github.com/zihao-wei-here">GitHub</a> &middot;
+      <a href="https://orcid.org/0009-0002-8415-6645">ORCID</a>
+    </p>
+  </div>
 </div>
 
 <hr>
 
-<h2>Research Focus</h2>
+<section class="home-section">
+  <h2>Research Focus</h2>
 
-<ul>
-  <li><strong>Integrated photonic sensing:</strong> microring resonators, subwavelength grating structures, and sensing-window design.</li>
-  <li><strong>Microwave photonic signal processing:</strong> high-resolution spectrum analysis, filter response design, and reconstruction algorithms.</li>
-  <li><strong>Optimization for photonic systems:</strong> parameter search, multi-objective optimization, and simulation-driven design.</li>
-  <li><strong>AI-assisted photonic design:</strong> exploring machine learning methods for inverse design, signal reconstruction, and photonic system analysis.</li>
-</ul>
+  <div class="home-card-grid">
+    <div class="home-card">
+      <h3>Integrated Photonic Sensing</h3>
+      <p>
+        Microring resonators, subwavelength grating structures, resonance shifts,
+        extinction ratio, insertion loss, and sensing-window design.
+      </p>
+    </div>
 
-<h2>Selected Projects</h2>
+    <div class="home-card">
+      <h3>Microwave Photonic Signal Processing</h3>
+      <p>
+        High-resolution spectrum analysis, microwave photonic filters, filter response
+        design, and reconstruction algorithms.
+      </p>
+    </div>
 
-<h3>Localized Subwavelength Grating Ring Resonator for Photonic Sensing</h3>
-<p>
-  I am developing and analyzing a localized subwavelength grating ring resonator structure
-  for photonic sensing. The project combines 3D-FDTD simulation, MODE analysis,
-  circuit-level INTERCONNECT modeling, and MATLAB/Python post-processing to study
-  resonance shifts, extinction ratio, insertion loss, and sensitivity.
-</p>
+    <div class="home-card">
+      <h3>Optimization for Photonic Systems</h3>
+      <p>
+        Multi-parameter design, simulation-driven search, Bayesian optimization,
+        evolutionary algorithms, and multi-objective evaluation.
+      </p>
+    </div>
 
-<h3>High-resolution Microwave Photonic Filter Design</h3>
-<p>
-  I have explored multi-channel microwave photonic filter design for high-resolution
-  spectrum analysis. This work involves filter response generation, autocorrelation and
-  cross-correlation analysis, parameter optimization, and signal reconstruction.
-</p>
+    <div class="home-card">
+      <h3>AI-assisted Photonic Design</h3>
+      <p>
+        Machine learning for inverse design, sparse signal reconstruction,
+        decoder-based models, and photonic system analysis.
+      </p>
+    </div>
+  </div>
+</section>
 
-<h3>AI-assisted Photonic Design and Signal Reconstruction</h3>
-<p>
-  I am interested in using optimization and machine learning to support photonic design
-  and inverse problems, including sparse signal reconstruction, decoder-based models,
-  and learning-based compensation for photonic systems.
-</p>
+<section class="home-section">
+  <h2>Selected Projects</h2>
 
-<h2>Recent Posts</h2>
-
-{% if site.posts.size > 0 %}
-  {% for post in site.posts limit:5 %}
+  <div class="home-project">
+    <h3>Localized Subwavelength Grating Ring Resonator for Photonic Sensing</h3>
     <p>
-      <span>{{ post.date | date: "%d %b %Y" }}</span> —
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      I am developing and analyzing a localized subwavelength grating ring resonator
+      structure for photonic sensing. The project combines Lumerical 3D-FDTD,
+      MODE, INTERCONNECT, and MATLAB/Python post-processing to study resonance shifts,
+      extinction ratio, insertion loss, and sensitivity.
     </p>
-  {% endfor %}
-{% else %}
-  <p>Research notes and technical writings will be updated here.</p>
-{% endif %}
+  </div>
+
+  <div class="home-project">
+    <h3>High-resolution Microwave Photonic Filter Design</h3>
+    <p>
+      I have explored multi-channel microwave photonic filter design for high-resolution
+      spectrum analysis, including filter response generation, autocorrelation and
+      cross-correlation analysis, parameter optimization, and signal reconstruction.
+    </p>
+  </div>
+
+  <div class="home-project">
+    <h3>AI-assisted Photonic Design and Signal Reconstruction</h3>
+    <p>
+      I am interested in connecting photonic hardware with computational methods,
+      especially for inverse problems, sparse signal recovery, and learning-based
+      compensation in integrated photonic systems.
+    </p>
+  </div>
+</section>
+
+<section class="home-section">
+  <h2>Recent Writing</h2>
+
+  {% assign real_posts = site.posts | where_exp: "post", "post.published != false" %}
+  {% if real_posts.size > 0 %}
+    {% for post in real_posts limit:5 %}
+      <p>
+        <span>{{ post.date | date: "%d %b %Y" }}</span> &mdash;
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </p>
+    {% endfor %}
+  {% else %}
+    <p>Research notes and technical writings will be updated here.</p>
+  {% endif %}
+</section>

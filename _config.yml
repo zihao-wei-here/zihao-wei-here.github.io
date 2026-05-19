@@ -25,7 +25,7 @@ description              : "M.Phil student at the University of Sydney working o
 url                      : "https://zihao-wei-here.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/zihao-wei-here"
-teaser                   : "/assets/profile.png"
+teaser                   : "/assets/profile.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
@@ -249,6 +249,7 @@ paginate_path: "/blog/page:num/"
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -257,6 +258,7 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

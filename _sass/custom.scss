@@ -1,17 +1,87 @@
-.home-intro {
-  max-width: 760px;
-  margin-bottom: 2rem;
+body {
+  background: #ffffff;
+  color: #222222;
 }
 
-.home-intro .avatar {
+a {
+  color: #1f5f9f;
+}
+
+.home-page .page__inner-wrap > header {
+  display: none;
+}
+
+.home-page .page__content {
+  padding-top: 0;
+}
+
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 980px;
+  margin: 2rem auto 3rem auto;
+}
+
+.home-avatar {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.home-hero-text {
+  max-width: 760px;
+}
+
+.home-hero h1 {
+  margin-bottom: 0.25rem;
+}
+
+.home-subtitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #555555;
   margin-bottom: 1rem;
 }
 
-.home-intro .lead {
-  font-size: 1.15rem;
-  line-height: 1.6;
+.home-links {
+  margin-top: 1rem;
+}
+
+.home-section {
+  max-width: 980px;
+  margin: 3rem auto;
+}
+
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-card,
+.home-project {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.home-card h3,
+.home-project h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-card-grid {
+    grid-template-columns: 1fr;
+  }
 }

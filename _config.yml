@@ -117,7 +117,6 @@ author:
   avatar           : "assets/profile.jpg"
   bio              : "M.Phil student at the University of Sydney working on integrated photonics, photonic sensing, and AI-assisted photonic design."
   location         : "Sydney, Australia"
-  email            : "zwei0450@uni.sydney.edu.au"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

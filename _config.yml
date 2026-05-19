@@ -17,12 +17,12 @@ minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Zihao Wei's Blog"
+title                    : "Zihao Wei"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : #"Zihao Wei"
-description              : #"M.Phil student researching AI and photonic signal processing."
-url                      : "https://zihao-wei-here.github.io/"
+subtitle                 : "Integrated Photonics · Photonic Sensing · AI-assisted Design"
+name                     : "Zihao Wei"
+description              : "M.Phil student at the University of Sydney working on integrated photonics, photonic sensing, microwave photonic signal processing, and AI-assisted photonic design."
+url                      : "https://zihao-wei-here.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/zihao-wei-here"
 teaser                   : "/assets/profile.png"
@@ -113,30 +113,21 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zihao"
+  name             : "Zihao Wei"
   avatar           : "assets/profile.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "M.Phil student at the University of Sydney working on integrated photonics, photonic sensing, and AI-assisted photonic design."
   location         : "Sydney, Australia"
   email            : "zwei0450@uni.sydney.edu.au"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "mailto:zwei0450@uni.sydney.edu.au"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/zihao-wei-here"
+    - label: "ORCID"
+      icon: "fas fa-fw fa-link"
+      url: "https://orcid.org/0009-0002-8415-6645"
 
 # Site Footer
 footer:

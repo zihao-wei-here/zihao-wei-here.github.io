@@ -2,36 +2,83 @@
 layout: default
 ---
 
-<div class="container">
-    <!-- 左侧个人介绍 -->
-    <div class="bio">
-        <img src="{{ site.url }}/assets/profile.jpg" class="avatar" alt="Zihao Wei">
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
+<div class="home-intro">
 
-        <p>Hey, I'm <strong>Zihao Wei</strong>. I am a M.Phil student at <a href="https://www.sydney.edu.au/">USYD</a> supervised by <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/xiaoke-yi.html">Professor Xiaoke Yi</a>.</p>   
-        <p>I did my B.E(CS) at <a href="https://www.nuc.edu.cn/">NUC</a>.</p>
-        <p>Previously I also spent time at <a href="http://english.ict.cas.cn/">ICT,CAS</a>.</p>
-        <p>I am interested in the intersection of Deep learning, Neural Nework Otimization, and PSys4ML.</p>
+  <img src="{{ site.url }}/assets/profile.jpg" class="avatar" alt="Zihao Wei">
 
-        <div class="social-icons">
-            <a href="https://github.com/zihao-wei-here" target="_blank">GitHub</a> |
-            <a href="mailto:zwei0450@uni.sydney.edu.au">Email</a>
-        </div>
-        <div class="references">
-            <h3>Reference: <a href="https://kvfrans.com/" target="_blank">https://kvfrans.com/</a></h3>
-        </div>
-        
-    </div>
+  <h1>Zihao Wei</h1>
 
-    <!-- 右侧 Recent Posts -->
-    <div class="post-list">
-        <h3 class="post-title">Recent Posts</h3>
-        {% for post in site.posts limit:5 %}
-        <div class="post-item">
-            <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
-            <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-        </div>
-        {% endfor %}
-    </div>
+  <p class="lead">
+    M.Phil student at the University of Sydney, supervised by
+    <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/xiaoke-yi.html">Prof. Xiaoke Yi</a>.
+  </p>
+
+  <p>
+    My research interests lie at the intersection of <strong>integrated photonics</strong>,
+    <strong>photonic sensing</strong>, <strong>microwave photonic signal processing</strong>,
+    and <strong>AI-assisted photonic design</strong>. I am particularly interested in how
+    computational methods, optimization, and machine learning can help design, analyze,
+    and interpret complex photonic systems.
+  </p>
+
+  <p>
+    Before joining the University of Sydney, I received my B.E. in Computer Science from
+    <a href="https://www.nuc.edu.cn/">North University of China</a> and spent time at
+    <a href="http://english.ict.cas.cn/">ICT, Chinese Academy of Sciences</a>.
+  </p>
+
+  <p>
+    <a href="mailto:zwei0450@uni.sydney.edu.au">Email</a> ·
+    <a href="https://github.com/zihao-wei-here">GitHub</a> ·
+    <a href="https://orcid.org/0009-0002-8415-6645">ORCID</a>
+  </p>
+
 </div>
+
+<hr>
+
+<h2>Research Focus</h2>
+
+<ul>
+  <li><strong>Integrated photonic sensing:</strong> microring resonators, subwavelength grating structures, and sensing-window design.</li>
+  <li><strong>Microwave photonic signal processing:</strong> high-resolution spectrum analysis, filter response design, and reconstruction algorithms.</li>
+  <li><strong>Optimization for photonic systems:</strong> parameter search, multi-objective optimization, and simulation-driven design.</li>
+  <li><strong>AI-assisted photonic design:</strong> exploring machine learning methods for inverse design, signal reconstruction, and photonic system analysis.</li>
+</ul>
+
+<h2>Selected Projects</h2>
+
+<h3>Localized Subwavelength Grating Ring Resonator for Photonic Sensing</h3>
+<p>
+  I am developing and analyzing a localized subwavelength grating ring resonator structure
+  for photonic sensing. The project combines 3D-FDTD simulation, MODE analysis,
+  circuit-level INTERCONNECT modeling, and MATLAB/Python post-processing to study
+  resonance shifts, extinction ratio, insertion loss, and sensitivity.
+</p>
+
+<h3>High-resolution Microwave Photonic Filter Design</h3>
+<p>
+  I have explored multi-channel microwave photonic filter design for high-resolution
+  spectrum analysis. This work involves filter response generation, autocorrelation and
+  cross-correlation analysis, parameter optimization, and signal reconstruction.
+</p>
+
+<h3>AI-assisted Photonic Design and Signal Reconstruction</h3>
+<p>
+  I am interested in using optimization and machine learning to support photonic design
+  and inverse problems, including sparse signal reconstruction, decoder-based models,
+  and learning-based compensation for photonic systems.
+</p>
+
+<h2>Recent Posts</h2>
+
+{% if site.posts.size > 0 %}
+  {% for post in site.posts limit:5 %}
+    <p>
+      <span>{{ post.date | date: "%d %b %Y" }}</span> —
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </p>
+  {% endfor %}
+{% else %}
+  <p>Research notes and technical writings will be updated here.</p>
+{% endif %}
